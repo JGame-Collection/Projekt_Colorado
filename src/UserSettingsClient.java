@@ -12,7 +12,7 @@ import com.thoughtworks.xstream.io.xml.StaxDriver;
 
 
 public class UserSettingsClient {
-	private static UserSettingsClient instanze = null;
+	private static UserSettingsClient instance = null;
 	private XStream xstream;
 	private boolean savedUsername;
 	private String sSavedUsername;
@@ -75,11 +75,11 @@ public class UserSettingsClient {
 	    return true;
 	}
 	
-	public static UserSettingsClient getInstanze(){
-		if(instanze == null){
-			instanze = new UserSettingsClient();
+	public static UserSettingsClient getInstance(){
+		if(instance == null){
+			instance = new UserSettingsClient();
 		}
-		return instanze;
+		return instance;
 	}
 
 	public boolean isSavedUsername() {

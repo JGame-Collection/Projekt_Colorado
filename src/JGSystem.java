@@ -17,7 +17,7 @@ public class JGSystem {
 	}
 
 	public static void exit(){
-		 UserSettingsClient.getInstanze().saveUserSettings();
+		 UserSettingsClient.getInstance().saveUserSettings();
 		 System.exit(0);
 	}
 	
