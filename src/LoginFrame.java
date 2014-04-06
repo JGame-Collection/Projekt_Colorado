@@ -45,7 +45,7 @@ public class LoginFrame extends JFrame
 	
 	public LoginFrame()
 	{
-		super("JGame Collection");
+		super(JGSystem.NAME);
 		this.setLayout(null);
 		this.strCapsNotification = "RAGEMODE ON";
 		this.FORGOTTEN_PW_LINK = "www.deineMutterDenktSieIstEinHobbitUndHeiﬂtFrodo.de";
@@ -186,10 +186,8 @@ public class LoginFrame extends JFrame
 			}else{
 				this.usc.setUsername("");
 			}
-			// TODO open next frame etc
 			loginframe.dispose();
-			JGSystem.exit();
-			
+			new MainFrame();
 		}else{
 			jlbWrongLoginNotification.setText("Login failed!");
 		}

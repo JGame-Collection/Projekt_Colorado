@@ -11,6 +11,7 @@ public class JGSystem {
 	public static final Color COLOR_ERROR = new Color(1.0f, 0.0f, 0.0f);
 	public static final Color COLOR_WARN = new Color(0.7f, 0.3f, 0.0f);
 	public static final String VERSION = "0.01 Alpha";
+	public static final String NAME = "JGame Collection";
 
 	protected JGSystem() {
 
