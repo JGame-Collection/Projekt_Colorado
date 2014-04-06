@@ -5,6 +5,7 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 
 public class MainFrame extends JFrame{
@@ -16,10 +17,14 @@ public class MainFrame extends JFrame{
 		super(JGSystem.NAME);
 		this.DEFAULT_MAIN_FRAMESIZE = new Dimension(1024, 768);
 		
+		JPanelMainFrameHeader jplnHeader = new JPanelMainFrameHeader();
+		jplnHeader.setSize(this.getWidth(), 100);
+		this.add(jplnHeader, BorderLayout.NORTH);
+		
+		
 		
 		this.setLayout(new BorderLayout());
-		
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		this.addWindowListener(new WLMainFrame());
 		this.setSize(this.DEFAULT_MAIN_FRAMESIZE);
 		this.setLocationRelativeTo(null);
