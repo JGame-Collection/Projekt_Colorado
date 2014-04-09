@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -12,13 +14,15 @@ public class MainFrame extends JFrame{
 	
 	
 	private final Dimension DEFAULT_MAIN_FRAMESIZE; 
+	private JPanelMainFrameHeader jplnHeader;
 
 	public MainFrame() {
 		super(JGSystem.NAME);
 		this.DEFAULT_MAIN_FRAMESIZE = new Dimension(1024, 768);
+		this.setSize(this.DEFAULT_MAIN_FRAMESIZE);
 		
-		JPanelMainFrameHeader jplnHeader = new JPanelMainFrameHeader();
-		jplnHeader.setSize(this.getWidth(), 100);
+		this.jplnHeader = new JPanelMainFrameHeader();
+		this.jplnHeader.setSize(this.getWidth(), 100);
 		this.add(jplnHeader, BorderLayout.NORTH);
 		
 		
@@ -26,9 +30,37 @@ public class MainFrame extends JFrame{
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		this.addWindowListener(new WLMainFrame());
-		this.setSize(this.DEFAULT_MAIN_FRAMESIZE);
+		this.addComponentListener(new CLMainFrame());
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
+	}
+	
+	private class CLMainFrame implements ComponentListener{
+
+		@Override
+		public void componentHidden(ComponentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void componentMoved(ComponentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void componentResized(ComponentEvent e) {
+			jplnHeader.setSize(getWidth(), 100);
+			
+		}
+
+		@Override
+		public void componentShown(ComponentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
 	}
 
 	private class WLMainFrame implements WindowListener{
