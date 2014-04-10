@@ -21,7 +21,12 @@ import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
 
-
+/**
+ * 
+ * @author tuS
+ * @version %I%, %G%
+ *
+ */
 public class LoginFrame extends JFrame
 {
 	private final Dimension FRAMESIZE;

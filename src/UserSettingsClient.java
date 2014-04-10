@@ -10,7 +10,12 @@ import java.util.Map;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
 
-
+/**
+ * 
+ * @author tuS
+ * @version %I%, %G%
+ *
+ */
 public class UserSettingsClient {
 	private static UserSettingsClient instance = null;
 	private XStream xstream;

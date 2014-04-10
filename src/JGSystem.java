@@ -1,6 +1,12 @@
 import java.awt.Color;
 import java.awt.Font;
 
+/**
+ * 
+ * @author tuS
+ * @version %I%, %G%
+ *
+ */
 public class JGSystem {
 	private static JGSystem instance = null;
 	public static final Font FONT_SMALL = new Font(Font.SANS_SERIF, Font.PLAIN, 12);

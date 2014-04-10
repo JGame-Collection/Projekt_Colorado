@@ -7,7 +7,12 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-
+/**
+ * 
+ * @author tuS
+ * @version %I%, %G%
+ *
+ */
 public class JPanelMainFrameHeader extends JPanel{
 	
 	private BufferedImage biHeader;

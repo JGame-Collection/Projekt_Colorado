@@ -9,7 +9,12 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-
+/**
+ * 
+ * @author tuS
+ * @version %I%, %G%
+ *
+ */
 public class MainFrame extends JFrame{
 	
 	

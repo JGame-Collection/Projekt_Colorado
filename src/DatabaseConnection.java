@@ -1,3 +1,9 @@
+/**
+ * 
+ * @author tuS
+ * @version %I%, %G%
+ *
+ */
 
 public class DatabaseConnection {
 
