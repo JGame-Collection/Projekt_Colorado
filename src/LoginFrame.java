@@ -26,6 +26,10 @@ import javax.swing.JTextField;
  * @author tuS
  * @version %I%, %G%
  *
+ * This class contains the main method. It is used to run a little setup prior to entering the game loop.
+ * This class violates every single coherent design decision, like, EVER.
+ *
+ * Like, oh. my. god. This class LITERALLY can't even.
  */
 public class LoginFrame extends JFrame
 {
@@ -214,33 +218,7 @@ public class LoginFrame extends JFrame
 		public MLLink(String uri){
 			this.uri = uri;
 		}
-		
-		
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void mouseEntered(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void mouseExited(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void mousePressed(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
+			@Override
 		public void mouseReleased(MouseEvent e) {
 			try {
 				URI uriRegistryLink = new URI(uri);
@@ -252,48 +230,15 @@ public class LoginFrame extends JFrame
 		}
 		
 	}
-	
-	private class WLLoginFrame implements WindowListener{
 
+
+        /*
+         * The following classes are some listeners, for, you know, decoupling some non-existent logic from some non-working stuff. Or whatever.
+         */
+	private class WLLoginFrame implements WindowListener{
 		@Override
 		public void windowActivated(WindowEvent e) {
 			checkOnCapslock();
-			
-		}
-
-		@Override
-		public void windowClosed(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowClosing(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowDeactivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowDeiconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowIconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowOpened(WindowEvent e) {
-			// TODO Auto-generated method stub
 		}
 	}
 
@@ -309,13 +254,6 @@ public class LoginFrame extends JFrame
 			txtfield.selectAll();
 			
 		}
-
-		@Override
-		public void focusLost(FocusEvent arg0) {
-			// TODO Auto-generated method stub
-			
-		}
-		
 	}
 	
 	private class ALLogin implements ActionListener{
@@ -341,12 +279,6 @@ public class LoginFrame extends JFrame
 		public void keyReleased(KeyEvent e) {
 
 		}
-
-		@Override
-		public void keyTyped(KeyEvent e) {
-			// TODO Auto-generated method stub
-			
-		}	
 	}
 
 }

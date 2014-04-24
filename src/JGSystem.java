@@ -6,6 +6,8 @@ import java.awt.Font;
  * @author tuS
  * @version %I%, %G%
  *
+ * This class contains some stuff about Fonts and Colors and some kind of name, I guess.
+ *
  */
 public class JGSystem {
 	private static JGSystem instance = null;
